@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {Route, Routes} from "react-router-dom";
+import SecureLayout from "./Components/SecureLayout";
+import Auth from "./Components/Auth";
+import Registor from "./Components/Registor";
+import Main from "./Components/Main";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+const App = () => {
+    return (
+        <div>
+            <Routes>
+
+                <Route path="/" element={<Auth/>}/>
+                <Route path="/registor" element={<Registor/>}/>
+
+            </Routes>
+
+            <Routes>
+
+
+                <Route path="/secure" element={<SecureLayout/>}>
+                    <Route path="main" element={<Main/>}/>
+                </Route>
+            </Routes>
+        </div>
+    )
+};
 export default App;
