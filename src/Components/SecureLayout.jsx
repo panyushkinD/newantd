@@ -34,13 +34,13 @@ const SecureLayout = () => {
                           {
                               key: '1',
                               icon: <UserOutlined/>,
-                              label: <Link to='/secure/main'>Main</Link>
+                              label: <Link to='/secure/movies'>Фильмы</Link>
                           },
                           {
 
                               key: '2',
                               icon: <UserOutlined/>,
-                              label: <Link to='/registor'>Регистрация</Link>
+                              label: <Link to='/secure/serials'>Сериалы</Link>
                           }
                       ]}/>
             </Sider>
@@ -55,7 +55,7 @@ const SecureLayout = () => {
                     style={{
                         margin: '0 16px',
                     }}
-                >
+                >тут тип Main начальная шеяга после реги или автори
                     <Outlet/>
 
                 </Content>

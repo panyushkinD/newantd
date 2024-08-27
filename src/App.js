@@ -3,9 +3,9 @@ import {Route, Routes} from "react-router-dom";
 import SecureLayout from "./Components/SecureLayout";
 import Auth from "./Components/Auth";
 import Registor from "./Components/Registor";
-import Main from "./Components/Main";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Movies from "./Components/Movies";
+
+import Serials from "./Components/Serials";
 
 
 const App = () => {
@@ -22,7 +22,8 @@ const App = () => {
 
 
                 <Route path="/secure" element={<SecureLayout/>}>
-                    <Route path="main" element={<Main/>}/>
+                    <Route path="movies" element={<Movies/>}/>
+                    <Route path="serials" element={<Serials/>}/>
                 </Route>
             </Routes>
         </div>
